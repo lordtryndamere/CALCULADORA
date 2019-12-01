@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+     Calculadora
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">Primer Numero </ion-label>
+      <ion-input type="Numero" [(ngModel)] = "firstnumber"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Segundo Numero </ion-label>
+      <ion-input type="Numero" [(ngModel)] = "secondnumber"></ion-input>
+    </ion-item>
+
+    <ion-item> 
+      <ion-label>Resultado : <span class="result"> {{result}} </span></ion-label>
+    </ion-item>
+  </ion-list>
+  
+  <ion-grid>
+    <ion-row>
+        <ion-col>
+            <ion-button expand="full" (click)="sum()">+</ion-button>
+        </ion-col>
+        <ion-col>
+            <ion-button expand="full" (click)="rest()">-</ion-button>
+        </ion-col>
+        <ion-col>
+            <ion-button expand="full" (click)="mult()">x</ion-button>
+        </ion-col>
+        <ion-col>
+            <ion-button expand="full" (click)="div()">/</ion-button>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
